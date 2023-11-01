@@ -1,0 +1,105 @@
+@media (max-width: 767px) {
+    .modal-project{
+        width: 90%!important;
+        height: 70%;
+    }
+    /* welcome */
+    .welcome-about-first{
+        width: 100%;
+    }
+    .welcome-presentation{
+        width: 100%;
+    }
+    .welcome-about-second{
+        margin-top: 5%;
+        width: 100%;
+        height: fit-content;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .container-main-section{
+        width: 100%;
+    }
+    .welcome-about-second-social{
+        min-height: 30px;
+    }
+    /* section project */
+    .container-main-section-content{
+        width: 100%!important;
+        height: 80%!important;
+        box-shadow: none!important;
+    }
+    /* partie carriére */
+    .career-timeline::before{
+        left: 0px;
+        background-color: #000;
+    }
+    .career-timeline-item:nth-child(odd){
+        padding-left: 15px;
+        padding-right: 0;
+        text-align: left;
+    }
+    .career-timeline-item:nth-child(even){
+        padding-left: 15px;
+    }
+    .timeline-date{
+        padding-top: 9px;
+        padding-left: 3px;
+    }
+    .timeline-dot{
+        left: 0;
+    }
+}
+@media (max-width: 620px) {
+    .modal-top{
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .modal-content-modal{
+        height: 90%;
+        padding: 0.5% 1%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .modal-content-modal-img{
+        margin: 0% 5% 0 5%;
+        display: none;
+        width: 30%;
+        height: 80%;
+        box-shadow: var(--welcome-conteneur-boxshadow-2);
+    }
+    
+    .modal-content-details{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .modal-content-details ul{
+        height: 10%;
+        width: 100%;
+        gap: 3%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .modal-content-detail-p{
+        width: 90%;
+        height: 60%;
+        letter-spacing: 1px;
+        padding: 0.5%;
+    }
+    
+    .modal-content-detail-ul{
+        height: 15%!important;
+    }
+}

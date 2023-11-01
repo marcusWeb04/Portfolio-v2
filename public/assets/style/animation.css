@@ -1,0 +1,275 @@
+@media (prefers-reduced-motion){
+    .hidden{
+        transform: none;
+        animation: none;
+    }
+}
+
+.hidden{
+    opacity: 0;
+}
+.show{
+    opacity: 1;
+}
+
+/* header */
+header.hidden{
+    transform: translateY(-100%);
+    transition: all 1s;
+}
+header.show{
+    transform: translateY(0);
+}
+
+.header-list-section.hidden{
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+    transition-delay: 300ms;
+}
+.header-list-section.show{
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.header-second-part a.hidden{
+    filter: blur(5px);
+    transform: translateY(-100%);
+    transition: all 1s;
+    transition-delay: 400ms;
+}
+.header-second-part a.show{
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.header-second-part svg.hidden{
+    filter: blur(5px);
+    transform: translateX(80%);
+    transition: all 1s;
+    transition-delay: 450ms;
+}
+.header-second-part svg.show {
+    filter: blur(0);
+    transform: translateY(0);
+    cursor: pointer;
+    transition: 2s ease-in-out; 
+}
+.header-second-part svg:hover {
+    transform: rotate(900deg);
+}
+
+/* parameter */
+.parameter.hidden.show{
+    opacity: 0;
+}
+.parameter.appears.hidden.show{
+    opacity: 1;
+}
+
+.parameter.hidden{
+    transition-delay: 1.3s ease;
+    animation: disappearance 1.3s ease;
+    transform: translateY(23%) translateX(100vw);
+}
+
+@keyframes disappearance {
+    from{
+        transform: translateY(23%) translateX(78vw);
+    }
+    to{
+        transform: translateY(23%) translateX(100vw);
+    }
+}
+
+.parameter.appears{
+    animation: appearance 0.7s ease;
+    transform: translateY(23%) translateX(78vw);
+}
+@keyframes appearance{
+    from{
+        transform: translateY(23%) translateX(100vw);
+    }
+    to{
+        transform: translateY(23%) translateX(78vw);
+    }
+}
+
+/* welcome */
+.welcome-presentation.hidden{
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: ease-in-out 1.5s;
+    transition-delay: 400ms;
+}
+.welcome-presentation.show{
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.welcome-about-first.hidden{
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: ease-in-out 1.5s;
+    transition-delay: 550ms;
+}
+.welcome-about-first.show{
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.welcome-about-second :nth-child(2).hidden{
+    transition-delay: 750ms;
+}
+.welcome-about-second :nth-child(3).hidden{
+    transition-delay: 950ms;
+}
+
+.welcome-about-second-social.hidden{
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 2s;
+    transition-delay: 550ms;
+}
+.welcome-about-second-social.show{
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+/* project */
+#project .container-main-section.show{
+    transition: all 2s;
+    transition-delay: 550ms;
+}
+
+#project .contanainer-main-section-title h2.hidden{
+    transform: translateX(-100%);
+    filter: blur(5px);
+    transition: ease-in-out 1s;
+    transition-delay: 400ms;
+}
+#project .contanainer-main-section-title h2.show{
+    transform: translateX(0);
+    filter: blur(0px);
+}
+
+#project .container-main-section-content.hidden{
+    overflow: hidden;
+    transition: ease-in-out 1.5s;
+    transition-delay: 400ms;
+}
+
+#project .container-main-section-content div.hidden:nth-child(1){
+    transform: translateY(-100%);
+    transition: ease-in-out 1s;
+    transition-delay: 400ms;
+}
+#project .container-main-section-content div.show:nth-child(1){
+    transform: translateY(0);
+}
+#project .container-main-section-content div.hidden:nth-child(2){
+    transform: translateY(-100%);
+    transition: ease-in-out 1.3s;
+    transition-delay: 500ms;
+}
+#project .container-main-section-content div.show:nth-child(2){
+    transform: translateY(0);
+}
+#project .container-main-section-content div.hidden:nth-child(3){
+    transform: translateY(100%);
+    transition: ease-in-out 1.6s;
+    transition-delay: 500ms;
+}
+#project .container-main-section-content div.show:nth-child(3){
+    transform: translateY(0);
+}
+#project .container-main-section-content div.hidden:nth-child(4){
+    transform: translateY(100%);
+    transition: ease-in-out 1.9s;
+    transition-delay: 550ms;
+}
+#project .container-main-section-content div.show:nth-child(4){
+    transform: translateY(0);
+}
+
+.part-project h1.hidden{
+    transform: translateY(-100px);
+    transition-delay: 400ms;
+    transition: 1s ease-in-out;
+}
+.part-project h1.show{
+    transform: translateY(0px);
+}
+
+.card-type-1.hidden{
+    transition: 0.4s ease-in-out;
+    transition-delay: 600ms;
+}
+
+.card-type1 h2.hidden{
+    transform: translateY(100%);
+    transition: 0.5s all;
+    transition: 900ms;
+}
+.card-type-1 h2.show{
+    transform: translateY(0%);
+}
+
+
+.content-card-type-1{
+    transform: translateY(100%);
+    transition: ease-in 0.6s;
+    transition-delay: 400ms;
+}
+.card-type-1:hover .content-card-type-1{
+    transform: translateY(0px);
+}
+
+.clipped-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    border-radius: 5px;
+    clip-path: circle(100%);
+    transition: clip-path 0.4s ease-in-out;
+}
+.card-type-2:hover .clipped-img{
+    clip-path: circle(125px at 50% 45%);
+}
+
+/* timeline */
+.career-title.hidden{
+    transform: translateX(-100px);
+    transition: all 0.5s;
+    transition-delay: 500ms;
+}
+.career-title.show{
+    transform: translateX(0);
+}
+
+.career-timeline.hidden::before{
+    transition: 0.5s ease-in-out;
+    transition-delay: 500ms;
+    opacity: 0;
+}
+.career-timeline.show::before{
+    opacity: 1;
+}
+
+.career-timeline-item:nth-child(odd).hidden{
+    transform: translateX(-100px);
+    transition: 0.7s ease-in-out;
+    transition-delay: 500ms;
+}
+.career-timeline-item:nth-child(odd).show{
+    transform: translateX(0px);
+}
+.career-timeline-item:nth-child(even).hidden{
+    transform: translateX(100px);
+    transition: 0.7s ease-in-out;
+    transition-delay: 500ms;
+}
+.career-timeline-item:nth-child(even).show{
+    transform: translateX(0px);
+}
