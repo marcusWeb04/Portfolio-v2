@@ -215,14 +215,34 @@ header.show{
     transform: translateY(0%);
 }
 
-
-.content-card-type-1{
-    transform: translateY(100%);
-    transition: ease-in 0.6s;
+.content-card-type-1 h3{
+    opacity: 0;
+    transition: ease-in-out 1s;
+    transition-delay: 300ms;
+    transform: translateX(100%);
+}
+.content-card-type-1:hover h3{
+    opacity: 1;
+    transform: translateX(0);
+}
+.content-card-type-1 p{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: ease-in-out 1s;
     transition-delay: 400ms;
 }
-.card-type-1:hover .content-card-type-1{
-    transform: translateY(0px);
+.content-card-type-1:hover p{
+    opacity: 1;
+    transform: translateX(0);
+}
+.content-card-type-1 a{
+    opacity: 0;
+    transition: ease-in 0.6s;
+    transition-delay: 500ms;
+    cursor: pointer;
+}
+.card-type-1:hover a{
+    opacity: 1;
 }
 
 .clipped-img{

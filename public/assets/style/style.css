@@ -40,6 +40,7 @@
     --border-shadow: #D5D5D5;
     --box-shadow-contact: -1px -1px 5px rgba(0,0,0,0.5);
     --box-shadow-contact-2: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    --box-shadow-information: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 /* police d'écriture */
@@ -103,6 +104,13 @@ header div{
 .header-second-part svg{
     width: 6%;
     margin-right: 3%;
+}
+
+.hamburger-responsive{
+    width: 3%;
+    height: fit-content;
+    display: none;
+    cursor: pointer;
 }
 
 /* parametre */
@@ -522,10 +530,54 @@ header div{
 /* contact */
 #contact{
     display: flex;
+    justify-content: space-around;
     padding-bottom: 1%;
+}
+#contact :nth-child(1){
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .part-contact{
-    border: 1px solid black;
-    width: 50%;
+    width: 45%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.part-contact h3{
+    padding: 1%;
+}
+.part-contact form{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.part-contact button{
+    width: fit-content;
+    padding: 3px 15px;
+    margin: 0 auto;
+}
+
+.part-form{
+    width: 75%;
+    margin: 5% 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.part-form input{
+    width: 100%;
+}
+
+.contact-information{
+    width: 45%;
+    height: 20%;
+    box-shadow: var(--box-shadow-information);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
