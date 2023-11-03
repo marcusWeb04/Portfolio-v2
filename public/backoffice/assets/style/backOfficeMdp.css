@@ -1,0 +1,99 @@
+:root{
+    --blanc: #FFF;
+    --gris: #D3D3D3;
+    --noir: #000;
+}
+
+*,::after,::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteneurConnection{
+    height: 60vh;
+    width: 30vw;
+    box-shadow: 15px 15px 30px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.conteneurConnection form{
+    height: 70%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.conteneurConnection input{
+    width: 80%;
+    border: 1px solid var(--noir);
+    min-width: fit-content;
+}
+
+#Envoyer{
+    border-radius: 50px;
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* animation */
+.InputBox{
+    position: relative;
+}
+.InputBox input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 1em;
+}
+.InputBox span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #D3D3D3;
+    transition: 0.5s;
+}
+.InputBox input:valid ~ span,
+.InputBox input:focus ~ span{
+    color: #F1F1F1;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background-color: var(--blanc);
+    border-left: 1px solid var(--noir);
+    border-right: 1px solid var(--noir);
+    letter-spacing: 0.2em;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+    .conteneurConnection{
+        width: 60vw;
+    }
+}
+
+@media (max-width: 491px) {
+    .conteneurConnection{
+        height: 90vh;
+        width: 90vw;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .conteneurConnection form{
+        height: 100%;
+        width: 100%;
+    }
+}
