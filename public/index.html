@@ -10,8 +10,14 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <!-- header -->
+    <!-- header --> 
     <header class="hidden">
+        <!-- header partie hamburger -->
+        <div class="hamburger-responsive">
+            <svg onclick="appearsResponsive()" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </div>
         <!-- header partie gauche -->
         <div class="header-list-section hidden">
             <a href="#project">Mes&nbsp;projets</a>
@@ -259,13 +265,66 @@
         </section>
         <!-- section contact -->
         <section id="contact">
-            <div class="part-contact"></div>
             <div class="part-contact">
+                <div class="contact-information">
+                    <p>email:</p>
+                    <a href="mailto:marcus.favernay@lyceestvincent.fr">
+                        marcus.favernay@lyceestvincent.fr
+                    </a>
+                </div>
+
+                <div class="contact-information">
+                    <a href="https://github.com/marcusWeb04" target="_blank">
+                        git-hub
+                    </a>
+                </div>
+
+                <div class="contact-information">
+                    <a href="https://www.linkedin.com/in/marcus-favernay-55605b259/"  target="_blank">linkdin</a>
+                </div>
+
+                <div class="contact-information">
+                    <p>numéro de téléphone:</p>
+                    <a href="tel:0781781754">07 81 78 17 54</a>
+                </div>
+            </div>
+            <div class="part-contact">
+                <h3>Me contacter</h3>
                 <form action="#" method="post">
+                    <!-- prénom -->
                     <div class="part-form">
-                        <label for=""></label>
-                        <input type="text">
+                        <label for="first-name">Votre prénom:</label>
+                        <input type="text" name="first-name">
                     </div>
+                    <!-- nom -->
+                    <div class="part-form">
+                        <label for="last-name">Votre nom</label>
+                        <input type="text" name="last-name">
+                    </div>
+                    <!-- email -->
+                    <div class="part-form">
+                        <label for="email">Mon email:</label>
+                        <input type="text" name="email">
+                    </div>
+                    <!-- sujet -->
+                    <div class="part-form">
+                        <label for="subject">Choissisez un sujet:</label>
+                        <select name="list-subject" id="subject">
+                            <option value="">--merci de choisir une option--</option>
+                            <option value="question">une question</option>
+                            <option value="information">un information</option>
+                            <option value="project">faire un projet en collaboration</option>
+                            <option value="intership">offre de stage</option>
+                            <option value="employs">une offre d'emploie</option>
+                        </select>
+                    </div>
+                    <!-- contenue -->
+                    <div class="part-form">
+                        <label for="content">Veillez entrer votre message:</label>
+                        <textarea name="content" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <!-- button -->
+                    <button type="button">Envoyer</button>
                 </form>
             </div>
         </section>
