@@ -1,3 +1,8 @@
+// apparition pour le menue hamburger
+function appearsResponsive(){
+    document.querySelector(".header-list-section").classList.toggle("appears");
+}
+
 // apparition de la modal pour les parametres
 function appearsParameter(){
     document.querySelector(".parameter").classList.toggle("appears");
