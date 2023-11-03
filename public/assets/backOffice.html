@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/backOffice.css">
+    <title>Back Office</title>
+</head>
+<body>
+    <aside>
+        <!-- accueil du portfolio -->
+        <div class="container-icon" onclick="appearsSection('home')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 011.414 0l7 7A1 1 0 0117 11h-1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-3a1 1 0 00-1-1H9a1 1 0 00-1 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-6H3a1 1 0 01-.707-1.707l7-7z" clip-rule="evenodd" />
+            </svg>                                       
+        </div>
+        <!-- section propos -->
+        <div class="container-icon" onclick="appearsSection('about')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm0 8.625a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25zM15.375 12a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0zM7.5 10.875a1.125 1.125 0 100 2.25 1.125 1.125 0 000-2.25z" clip-rule="evenodd" />
+            </svg>              
+        </div>
+        <!-- projet -->
+        <div class="container-icon" onclick="appearsSection('project')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path d="M19.5 21a3 3 0 003-3v-4.5a3 3 0 00-3-3h-15a3 3 0 00-3 3V18a3 3 0 003 3h15zM1.5 10.146V6a3 3 0 013-3h5.379a2.25 2.25 0 011.59.659l2.122 2.121c.14.141.331.22.53.22H19.5a3 3 0 013 3v1.146A4.483 4.483 0 0019.5 9h-15a4.483 4.483 0 00-3 1.146z" />
+            </svg>                        
+        </div>
+        <!-- timeline -->
+        <div class="container-icon" onclick="appearsSection('timeline')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path d="M11.644 1.59a.75.75 0 01.712 0l9.75 5.25a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.712 0l-9.75-5.25a.75.75 0 010-1.32l9.75-5.25z" />
+                <path d="M3.265 10.602l7.668 4.129a2.25 2.25 0 002.134 0l7.668-4.13 1.37.739a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.71 0l-9.75-5.25a.75.75 0 010-1.32l1.37-.738z" />
+                <path d="M10.933 19.231l-7.668-4.13-1.37.739a.75.75 0 000 1.32l9.75 5.25c.221.12.489.12.71 0l9.75-5.25a.75.75 0 000-1.32l-1.37-.738-7.668 4.13a2.25 2.25 0 01-2.134-.001z" />
+            </svg>                
+        </div>
+        <!-- gestion message -->
+        <div class="container-icon" onclick="appearsSection('message')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+            </svg>              
+        </div>
+        <!-- gestion utilisateur -->
+        <div class="container-icon" onclick="appearsSection('user')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
+            </svg>  
+        </div>
+        <!-- prévisualisation -->
+        <div class="container-icon" onclick="appearsSection('preview')">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path d="M5.566 4.657A4.505 4.505 0 016.75 4.5h10.5c.41 0 .806.055 1.183.157A3 3 0 0015.75 3h-7.5a3 3 0 00-2.684 1.657zM2.25 12a3 3 0 013-3h13.5a3 3 0 013 3v6a3 3 0 01-3 3H5.25a3 3 0 01-3-3v-6zM5.25 7.5c-.41 0-.806.055-1.184.157A3 3 0 016.75 6h10.5a3 3 0 012.683 1.657A4.505 4.505 0 0018.75 7.5H5.25z" />
+            </svg>              
+        </div>
+    </aside>
+    <main>
+        <section id="home" class="section-main">
+            <div class="section-title">
+                <h2>Back office</h2>
+            </div>
+            <div class="section-content">
+                <div class="messageWelcome">
+                    <p>
+                        Bienvenue sur le back office du portfolio, c'est ici que l'on peut interragir de façon dynamique avec le portfolio.
+                    </p>
+                </div>
+                <div class="hourWelcome">
+                    <p>
+                        Il est actuellement:
+                        </br>
+                    </p>
+                </div>
+                <div class="numberWelcome">
+                    <p>nombre de personne qui ont visité le portfolio:
+                    </br>
+                </p>
+                </div>
+                <div class="backWelcome">
+                    <a href="../index.html">
+                        revenir vers la partie client
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="section-main appears">
+            <div class="section-title">
+                <h2>Portfolio - A propos</h2>
+            </div>
+            <nav>
+                <p onclick="appearsAbout('modification')">modification</p> 
+                <p onclick="appearsAbout('preview')">prévisualisation</p>
+            </nav>
+            <div class="section-content appears" id="about-modification">
+                <form action="#">
+                    <div id="message-about">
+                        <label for="welcome-about-first">Message d'entrer:</label>
+                        <textarea name="welcome-about-first" rows="15"></textarea>
+                    </div>
+                    <div id="social-about">
+                        <div class="container-social-about">
+                            <label for="social-media-1">Le premier réseau social:</label>
+                            <input type="text">
+                        </div>
+                        <div class="container-social-about">
+                            <label for="social-media-2">Le second réseau social:</label>
+                            <input type="text">
+                        </div>
+                        <div class="container-social-about">
+                            <label for="social-media-3">Le troisiéme réseau social:</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div id="social-button">
+                        <button>valider</button>
+                    </div>
+                </form>
+            </div>
+            <div class="section-content" id="about-preview">
+                <div id="message-about">
+                    <p>Message d'entrer:</p>
+                    <p></p>
+                </div>
+                <div id="social-about">
+                    <div class="container-social-about">
+                        <p>Le premier réseau social:</p>
+                        <p></p>
+                    </div>
+                    <div class="container-social-about">
+                        <p>Le second réseau social:</p>
+                        <p></p>
+                    </div>
+                    <div class="container-social-about">
+                        <p>Le troisiéme réseau social:</p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="project" class="section-main">
+            <div class="section-title">
+                <h2>Portfolio - Projet</h2>
+            </div>
+            <nav>
+                <div onclick="appearsProject('personal')" class="container-project-icon">
+                    <div class="content-project-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+                            <path d="M20 5h-9.586L8.707 3.293A.997.997 0 0 0 8 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2z"></path>
+                        </svg>
+                    </div>
+                    <p>projet personnel</p>
+                </div>
+
+                <div onclick="appearsProject('professional')" class="container-project-icon">
+                    <div class="content-project-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+                            <path d="M20 5h-8.586L9.707 3.293A.997.997 0 0 0 9 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zM4 19V7h16l.002 12H4z"></path>
+                        </svg>
+                    </div>
+                    <p>projet professionnel</p>
+                </div>
+
+                <div onclick="appearsProject('supervise')" class="container-project-icon">
+                    <div class="content-project-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);">
+                            <path d="M2.165 19.551c.186.28.499.449.835.449h15c.4 0 .762-.238.919-.606l3-7A.998.998 0 0 0 21 11h-1V7c0-1.103-.897-2-2-2h-6.1L9.616 3.213A.997.997 0 0 0 9 3H4c-1.103 0-2 .897-2 2v14h.007a1 1 0 0 0 .158.551zM17.341 18H4.517l2.143-5h12.824l-2.143 5zM18 7v4H6c-.4 0-.762.238-.919.606L4 14.129V7h14z"></path>
+                        </svg>
+                    </div>
+                    <p>projet supervisé</p>
+                </div>
+
+                <div> <p>prévisualisation</p></div>
+            </nav>            
+            <div class="section-content appears">
+                <!-- projet personelle -->
+                <div class="container-project appears" id="personal-project">
+                    <nav>
+                        <p onclick="appearsPersonalProject('add-personal-project')">ajouter</p> 
+                        <p onclick="appearsPersonalProject('list-personal-project')">liste</p>
+                    </nav>
+                    <div class="container-project-part personal appears" id="personnal-project-add">
+                        <div class="content-project">
+                            <h3>Ajouter un projet</h3>
+                            <form action="#" method="POST">
+                                <div>
+                                    <label for="project-nom">nom du projet:</label>
+                                    <input type="text" name="project-nom">
+                                </div>
+                                <div>
+                                    <label for="project-content">description du projet:</label>
+                                    <textarea name="project-content" cols="40" rows="10">
+
+                                    </textarea>
+                                </div>
+                                <div>
+                                    <label for="project-techno">ajouter une technologie:</label>
+                                    <input type="text" name="project-techno">
+                                </div>
+                                <div>
+                                    <button>Ajouter le projet</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="container-project-part personal" id="personnal-project-list">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Description</th>
+                                    <th>Type</th>
+                                    <th>Modifier</th>
+                                    <th>Supprimer</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><button>modifier</button></td>
+                                    <td><button>supprimer</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- projet profesionelle -->
+                <div class="container-project" id="professional-project">
+                    <nav>
+                        <p onclick="appearsProfesionalProject('add-professional-project')">ajouter</p> 
+                        <p onclick="appearsProfesionalProject('list-professional-project')">liste</p>
+                    </nav>
+                    <div class="container-project-part professional appears" id="add-professional-project">
+                        <div class="content-project">
+                            <h3>Ajouter un projet</h3>
+                            <form action="#" method="POST">
+                                <div>
+                                    <label for="project-nom">nom du projet:</label>
+                                    <input type="text" name="project-nom">
+                                </div>
+                                <div>
+                                    <label for="project-content">description du projet:</label>
+                                    <textarea name="project-content" cols="40" rows="10">
+
+                                    </textarea>
+                                </div>
+                                <div>
+                                    <label for="project-techno">ajouter une technologie:</label>
+                                    <input type="text" name="project-techno">
+                                </div>
+                                <div>
+                                    <button>Ajouter le projet</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="container-project-part professional" id="list-professional-project">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Description</th>
+                                    <th>Type</th>
+                                    <th>Modifier</th>
+                                    <th>Supprimer</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <!-- projet supervisé -->
+                <div class="container-project" id="supervise-project">
+                    <nav>
+                        <p onclick="appearsSuperviseProject('add-supervise-project')">ajouter</p> 
+                        <p onclick="appearsSuperviseProject('list-supervise-project')">liste</p>
+                    </nav>
+                    <div class="container-project-part supervise appears" id="add-supervise-project">
+                        <div class="content-project">
+                            <h3>Ajouter un projet</h3>
+                            <form action="#" method="POST">
+                                <div>
+                                    <label for="project-nom">nom du projet:</label>
+                                    <input type="text" name="project-nom">
+                                </div>
+                                <div>
+                                    <label for="project-content">description du projet:</label>
+                                    <textarea name="project-content" cols="40" rows="10">
+
+                                    </textarea>
+                                </div>
+                                <div>
+                                    <label for="project-techno">ajouter une technologie:</label>
+                                    <input type="text" name="project-techno">
+                                </div>
+                                <div>
+                                    <button>Ajouter le projet</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="container-project-part supervise" id="list-supervise-project">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nom</th>
+                                    <th>Description</th>
+                                    <th>Type</th>
+                                    <th>Modifier</th>
+                                    <th>Supprimer</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="timeline" class="section-main">
+            <div class="section-title"><h2>Portfolio - Technologie</h2></div>
+            <nav><p onclick="appearsNavTechnologie('add')">ajouter</p> 
+                <p onclick="appearsNavTechnologie('list')">liste des Technologies</p> 
+                <p>prévisualisation</p></nav>
+            <div class="section-content">
+                <div class="section-content-part" id="project-content-add">
+                    <form action="#" method="POST">
+                        <div class="section-content-part-form" id=section-content-part-add>
+                            <label for="date">Veillez entrer une date:</label>
+                            <input type="text" name="date">
+                        </div>
+                        <div class="section-content-part-form" id="section-content-part-list">
+                            <label for="nom">Entrer le nom de la technologie que vous voulez ajouter:</label>
+                            <input type="text" name="nom">
+                        </div>
+                        <div class="section-content-part-form">
+                            <label for="description">Entrer la description de la technologie que vous voulez ajouter:</label>
+                            <input type="text" name="description">
+                        </div>
+                        <button type="submit">Ajouter la technologie</button>
+                    </form>
+                </div>
+                <div class="section-content-part appears" id="project-content-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Description</th>
+                                <th>Type</th>
+                                <th>Modifier</th>
+                                <th>Supprimer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Nom</td>
+                                <td>Description</td>
+                                <td>Type</td>
+                                <td><a href="#">Modifier</a></td>
+                                <td><a href="#">supprimer</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section id="message" class="section-main">
+            <div class="section-title"><h2>Portfolio - Message</h2></div>
+            <div class="section-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prenom</th>
+                            <th>L'adresse email</th>
+                            <th>Sujet</th>
+                            <th>Contenu</th>
+                            <th>Répondre</th>
+                            <th>Supprimer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>nom</td>
+                            <td>prenom</td>
+                            <td>adresse email</td>
+                            <td>sujet</td>
+                            <td>contenue</td>
+                            <td><a href="#">répondre</a></td>
+                            <td><a href="#">supprimer</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="user" class="section-main">
+            <div class="section-title"><h2>Portfolio - Utilisateur</h2></div>
+            <div class="section-content">
+                <div class="card-user">
+                    <h3>Utilisateur</h3>
+                    <div class="card-user-form-part">
+                        <p>Nom de l'utilisateur:</p>
+                        <p></p>
+                    </div>
+                    <div class="card-user-form-part">
+                        <p>Mot de passe de l'utilisateur:</p>
+                        <p></p>
+                    </div>
+                </div>
+                <form class="card-user">
+                    <h3>Modifier l'utilisateur</h3>
+                    <div class="card-user-form-part">
+                        <label for="name-user">Nom de l'utilisateur:</label>
+                        <input type="text" name="name-user">
+                    </div>
+                    <div class="card-user-form-part">
+                        <label for="password-user">Mot de passe de l'utilisateur:</label>
+                        <input type="text" name="password-user">
+                    </div>
+                    <button type="submit">valider</button>
+                </form>
+            </div>
+        </section>
+        <section id="preview" class="section-main">
+            <div class="section-title"><h2>Portfolio - preview</h2></div>
+            <div class="section-content"></div>
+        </section>
+    </main>
+</body>
+<script src="assets/javascript/backOffice.js"></script>
+</html>
